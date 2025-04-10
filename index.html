@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+  <div class="container">
+    <div class="calculator">
+      <div class="top-bar">
+        <h2>Calculadora Científica</h2>
+        <button id="themeToggle">🌙</button>
+      </div>
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button class="sp" onclick="clearDisplay()">C</button>
+        <button class="sp" onclick="deleteLast()">⌫</button>
+        <button class="sp" onclick="append('(')">(</button>
+        <button class="sp" onclick="append(')')">)</button>
+
+        <button class="op" onclick="append('Math.sin(')">sin</button>
+        <button class="op" onclick="append('Math.cos(')">cos</button>
+        <button class="op" onclick="append('Math.tan(')">tan</button>
+        <button class="op" onclick="append('^')">xʸ</button>
+
+        <button class="num" onclick="append('7')">7</button>
+        <button class="num" onclick="append('8')">8</button>
+        <button class="num" onclick="append('9')">9</button>
+        <button class="op" onclick="append('/')">÷</button>
+
+        <button class="num" onclick="append('4')">4</button>
+        <button class="num" onclick="append('5')">5</button>
+        <button class="num" onclick="append('6')">6</button>
+        <button class="op" onclick="append('*')">×</button>
+
+        <button class="num" onclick="append('1')">1</button>
+        <button class="num" onclick="append('2')">2</button>
+        <button class="num" onclick="append('3')">3</button>
+        <button class="op" onclick="append('-')">−</button>
+
+        <button class="num" onclick="append('0')">0</button>
+        <button class="num" onclick="append('.')">.</button>
+        <button class="sp   " onclick="calculate()">=</button>
+        <button class="op" onclick="append('+')">+</button>
+
+        <button class="op" onclick="append('Math.PI')">π</button>
+        <button class="op" onclick="append('Math.E')">e</button>
+        <button class="op" onclick="append('Math.sqrt(')">√</button>
+        <button class="op" onclick="append('Math.log10(')">log</button>
+        <button class="op" onclick="append('Math.log(')">ln</button>
+      </div>
+    </div>
+
+    <div class="history">
+      <h3>Historial</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
